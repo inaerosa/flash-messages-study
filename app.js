@@ -22,6 +22,10 @@ app.use(flash());
 // View Engine - EJS
 app.set('view engine', 'ejs')
 
+app.get('/', (req, res) => {
+    res.render('pages/index');
+})
+
 
 app.listen(3000, () => {
     console.log('running')
