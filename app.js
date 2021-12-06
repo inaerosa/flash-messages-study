@@ -19,6 +19,9 @@ app.use(session({
 
 app.use(flash());
 
+// View Engine - EJS
+app.set('view engine', 'ejs')
+
 
 app.listen(3000, () => {
     console.log('running')
