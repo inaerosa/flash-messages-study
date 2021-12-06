@@ -23,10 +23,13 @@ app.use(flash());
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.render('pages/index')
+    const username = req.flash('user')
+
+    res.render('pages/index', { username })
 })
 
 app.post('/', (req,res) => {
+    req.flash('user', req.body.username)
     res.redirect('/');
 })
 
