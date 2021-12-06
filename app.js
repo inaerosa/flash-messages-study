@@ -23,7 +23,7 @@ app.use(flash());
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.redirect('/');
+    res.render('pages/index')
 })
 
 app.listen(3000, () => {
