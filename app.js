@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
     res.render('pages/index')
 })
 
+app.get('/', (req,res) => {
+    res.redirect('/');
+})
+
 app.listen(3000, () => {
     console.log('running')
 })
